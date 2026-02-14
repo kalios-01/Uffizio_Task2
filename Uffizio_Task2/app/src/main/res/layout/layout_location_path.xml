@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/card_padding"
+    android:paddingVertical="@dimen/padding_default">
+
+    <!-- START LOCATION ROW -->
+    <TextView
+        android:id="@+id/tvStartLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_extra_large"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Bamnia Rd, Kalsadiya, Madhya Pradesh (NE)" />
+
+    <!-- MIDDLE ROW (Coordinates & Route) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutCoordinates"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_small"
+        app:layout_constraintBottom_toTopOf="@id/tvEndLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvStartLocation"
+        app:layout_constraintTop_toBottomOf="@id/tvStartLocation">
+
+        <!-- Start Badge -->
+        <TextView
+            android:id="@+id/tvStartNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_number_badge_green"
+            android:gravity="center"
+            android:letterSpacing="0.1"
+            android:paddingHorizontal="@dimen/padding_small"
+            android:paddingVertical="2dp"
+            android:textColor="@color/badge_green_text"
+            android:textSize="@dimen/text_size_body"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="2 6 9 3 8 5.0" />
+
+        <!-- Start Dot -->
+        <View
+            android:id="@+id/dotStartLocation"
+            android:layout_width="@dimen/location_dot_size"
+            android:layout_height="@dimen/location_dot_size"
+            android:layout_marginStart="@dimen/margin_small"
+            android:background="@drawable/bg_location_dot"
+            android:backgroundTint="@color/location_dot_start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvStartNumber"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Route Line -->
+        <View
+            android:id="@+id/viewRouteLine"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="@dimen/margin_tiny"
+            android:background="@color/divider_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/dotEndLocation"
+            app:layout_constraintStart_toEndOf="@id/dotStartLocation"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- End Dot -->
+        <View
+            android:id="@+id/dotEndLocation"
+            android:layout_width="@dimen/location_dot_size"
+            android:layout_height="@dimen/location_dot_size"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:background="@drawable/bg_location_dot"
+            android:backgroundTint="@color/location_dot_end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvEndNumber"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- End Badge -->
+        <TextView
+            android:id="@+id/tvEndNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_number_badge_gray"
+            android:gravity="center"
+            android:letterSpacing="0.1"
+            android:paddingHorizontal="@dimen/padding_small"
+            android:paddingVertical="2dp"
+            android:textColor="@color/badge_gray_text"
+            android:textSize="@dimen/text_size_body"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="2 6 9 8 7 8.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- END LOCATION ROW -->
+    <TextView
+        android:id="@+id/tvEndLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_extra_large"
+        android:layout_marginTop="@dimen/margin_small"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutCoordinates"
+        tools:text="HP PETROL PUMP BHANDARI PETROLEUM, Madhya..." />
+
+    <!-- LEFT BRACKET VISUALS -->
+    <!-- Top Horizontal Line -->
+    <View
+        android:id="@+id/viewBracketTop"
+        android:layout_width="@dimen/margin_medium"
+        android:layout_height="1dp"
+        android:background="#9E9E9E"
+        app:layout_constraintBottom_toBottomOf="@id/tvStartLocation"
+        app:layout_constraintEnd_toStartOf="@id/tvStartLocation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvStartLocation" />
+
+    <!-- Vertical Line -->
+    <View
+        android:id="@+id/viewBracketVertical"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#9E9E9E"
+        app:layout_constraintBottom_toBottomOf="@id/viewBracketBottom"
+        app:layout_constraintStart_toStartOf="@id/viewBracketTop"
+        app:layout_constraintTop_toTopOf="@id/viewBracketTop" />
+
+    <!-- Arrow Icon -->
+    <ImageView
+        android:id="@+id/ivBracketArrow"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:background="@color/background_card"
+        android:padding="2dp"
+        android:src="@drawable/ic_arrow_right"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="@id/viewBracketVertical"
+        app:layout_constraintEnd_toEndOf="@id/viewBracketVertical"
+        app:layout_constraintStart_toStartOf="@id/viewBracketVertical"
+        app:layout_constraintTop_toTopOf="@id/viewBracketVertical"
+        app:tint="#9E9E9E" />
+
+    <!-- Bottom Horizontal Line -->
+    <View
+        android:id="@+id/viewBracketBottom"
+        android:layout_width="@dimen/margin_medium"
+        android:layout_height="1dp"
+        android:background="#9E9E9E"
+        app:layout_constraintBottom_toBottomOf="@id/tvEndLocation"
+        app:layout_constraintEnd_toStartOf="@id/tvEndLocation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvEndLocation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

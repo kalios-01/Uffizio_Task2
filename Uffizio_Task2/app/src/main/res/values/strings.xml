@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Uffizio_Task2</string>
+
+    <!-- Travel Summary Screen -->
+    <string name="screen_title_travel_summary">Travel Summary</string>
+    <string name="date_this_week">This week (Mon-Today)</string>
+    
+    <!-- Status Labels -->
+    <string name="status_running">Running</string>
+    <string name="status_stop">Stop</string>
+    <string name="status_idle">Idle</string>
+    <string name="status_inactive">Inactive</string>
+    
+    <!-- Speed Labels -->
+    <string name="label_avg_speed">Avg</string>
+    <string name="label_max_speed">Max</string>
+    <string name="unit_speed_kmh">km/h</string>
+    
+    <!-- Distance -->
+    <string name="unit_distance_km">km</string>
+    
+    <!-- Accessibility -->
+    <string name="cd_back_button">Navigate back</string>
+    <string name="cd_search_button">Search</string>
+    <string name="cd_filter_button">Filter</string>
+    <string name="cd_menu_button">More options</string>
+    <string name="cd_date_selector">Select date range</string>
+    <string name="cd_vehicle_card">Vehicle information card</string>
+    <string name="cd_driver_icon">Driver</string>
+    <string name="cd_speed_icon">Speed indicator</string>
+    <string name="cd_expand_card">Expand for more details</string>
+</resources>

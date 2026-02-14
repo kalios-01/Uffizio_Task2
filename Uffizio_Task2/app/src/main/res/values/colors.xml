@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Primary Colors -->
+    <color name="primary_blue">#1E88E5</color>
+    <color name="primary_blue_light">#E3F2FD</color>
+    <color name="primary_blue_strip">#C5E0FF</color>
+
+    <!-- Status Colors -->
+    <color name="status_running">#4CAF50</color>
+    <color name="status_running_light">#C8E6C9</color>
+    <color name="status_stop">#F44336</color>
+    <color name="status_stop_light">#FFCDD2</color>
+    <color name="status_idle">#FF9800</color>
+    <color name="status_idle_light">#FFE0B2</color>
+    <color name="status_inactive">#2196F3</color>
+    <color name="status_inactive_light">#BBDEFB</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_tertiary">#9E9E9E</color>
+    <color name="text_on_primary">#FFFFFF</color>
+
+    <!-- Background Colors -->
+    <color name="background_main">#F5F5F5</color>
+    <color name="background_card">#FFFFFF</color>
+    <color name="background_date_selector">#00000000</color>
+
+    <!-- Border/Divider Colors -->
+    <color name="divider_color">#E0E0E0</color>
+    <color name="border_color">#EEEEEE</color>
+
+    <!-- Badge/Number -->
+    <color name="badge_green_bg">#C8E6C9</color>
+    <color name="badge_green_text">#2E7D32</color>
+    <color name="badge_gray_bg">#E0E0E0</color>
+    <color name="badge_gray_text">#757575</color>
+
+    <!-- Location Dot Colors -->
+    <color name="location_dot_start">#4CAF50</color>
+    <color name="location_dot_middle">#9E9E9E</color>
+    <color name="location_dot_end">#9E9E9E</color>
+
+    <!-- Toolbar -->
+    <color name="toolbar_background">#FFFFFF</color>
+    <color name="toolbar_icon">#212121</color>
+
+    <!-- Status Bar (for edge-to-edge) -->
+    <color name="status_bar_scrim">@android:color/transparent</color>
+</resources>

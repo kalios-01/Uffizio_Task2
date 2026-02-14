@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/card_padding"
+    android:paddingTop="@dimen/padding_medium">
+
+    <!-- Left Guideline (20%) -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStatus1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25304136" />
+
+    <!-- Middle Left Guideline (50%) -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStatus2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <!-- Middle Right Guideline (70%) -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStatus3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <!-- RUNNING STATUS -->
+    <TextView
+        android:id="@+id/tvStatusRunningLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/status_running"
+        android:textColor="@color/text_secondary"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintEnd_toStartOf="@id/guidelineStatus1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewStatusRunningBar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/status_bar_height"
+        android:layout_marginEnd="@dimen/margin_extra_small"
+        android:layout_marginTop="@dimen/margin_tiny"
+        android:background="@drawable/bg_status_bar_rounded"
+        android:backgroundTint="@color/status_running"
+        app:layout_constraintEnd_toStartOf="@id/guidelineStatus1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvStatusRunningLabel" />
+
+    <TextView
+        android:id="@+id/tvStatusRunningTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_tiny"
+        android:gravity="start"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_size_default"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/guidelineStatus1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewStatusRunningBar"
+        tools:text="12:52 hrs" />
+
+
+    <!-- STOP STATUS -->
+    <TextView
+        android:id="@+id/tvStatusStopLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/status_stop"
+        android:textColor="@color/text_secondary"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintEnd_toStartOf="@id/guidelineStatus2"
+        app:layout_constraintStart_toStartOf="@id/guidelineStatus1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewStatusStopBar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/status_bar_height"
+        android:layout_marginEnd="@dimen/margin_extra_small"
+        android:layout_marginStart="@dimen/margin_extra_small"
+        android:layout_marginTop="@dimen/margin_tiny"
+        android:background="@drawable/bg_status_bar_rounded"
+        android:backgroundTint="@color/status_stop"
+        app:layout_constraintEnd_toStartOf="@id/guidelineStatus2"
+        app:layout_constraintStart_toStartOf="@id/guidelineStatus1"
+        app:layout_constraintTop_toBottomOf="@id/tvStatusStopLabel" />
+
+    <TextView
+        android:id="@+id/tvStatusStopTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_tiny"
+        android:gravity="start"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_size_default"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/guidelineStatus2"
+        app:layout_constraintStart_toStartOf="@id/guidelineStatus1"
+        app:layout_constraintTop_toBottomOf="@id/viewStatusStopBar"
+        tools:text="00:50 hrs" />
+
+
+    <!-- IDLE STATUS -->
+    <TextView
+        android:id="@+id/tvStatusIdleLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/status_idle"
+        android:textColor="@color/text_secondary"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintEnd_toStartOf="@id/guidelineStatus3"
+        app:layout_constraintStart_toStartOf="@id/guidelineStatus2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewStatusIdleBar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/status_bar_height"
+        android:layout_marginEnd="@dimen/margin_extra_small"
+        android:layout_marginStart="@dimen/margin_extra_small"
+        android:layout_marginTop="@dimen/margin_tiny"
+        android:background="@drawable/bg_status_bar_rounded"
+        android:backgroundTint="@color/status_idle"
+        app:layout_constraintEnd_toStartOf="@id/guidelineStatus3"
+        app:layout_constraintStart_toStartOf="@id/guidelineStatus2"
+        app:layout_constraintTop_toBottomOf="@id/tvStatusIdleLabel" />
+
+    <TextView
+        android:id="@+id/tvStatusIdleTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_tiny"
+        android:gravity="start"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_size_default"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/guidelineStatus3"
+        app:layout_constraintStart_toStartOf="@id/guidelineStatus2"
+        app:layout_constraintTop_toBottomOf="@id/viewStatusIdleBar"
+        tools:text="03:55 hrs" />
+
+
+    <!-- INACTIVE STATUS -->
+    <TextView
+        android:id="@+id/tvStatusInactiveLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/status_inactive"
+        android:textColor="@color/text_secondary"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guidelineStatus3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewStatusInactiveBar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/status_bar_height"
+        android:layout_marginStart="@dimen/margin_extra_small"
+        android:layout_marginTop="@dimen/margin_tiny"
+        android:background="@drawable/bg_status_bar_rounded"
+        android:backgroundTint="@color/status_inactive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guidelineStatus3"
+        app:layout_constraintTop_toBottomOf="@id/tvStatusInactiveLabel" />
+
+    <TextView
+        android:id="@+id/tvStatusInactiveTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_tiny"
+        android:gravity="start"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_size_default"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guidelineStatus3"
+        app:layout_constraintTop_toBottomOf="@id/viewStatusInactiveBar"
+        tools:text="07:04 hrs" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

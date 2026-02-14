@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/card_padding"
+    android:paddingHorizontal="@dimen/card_padding"
+    android:paddingTop="@dimen/padding_default">
+
+    <!-- Average Speed Icon -->
+    <ImageView
+        android:id="@+id/ivAvgSpeed"
+        android:layout_width="@dimen/icon_size_small"
+        android:layout_height="@dimen/icon_size_small"
+        android:contentDescription="@string/cd_speed_icon"
+        android:src="@drawable/ic_speed_avg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/text_secondary" />
+
+    <!-- Average Speed Label -->
+    <TextView
+        android:id="@+id/tvAvgSpeedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_tiny"
+        android:text="@string/label_avg_speed"
+        android:textColor="@color/text_secondary"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintBottom_toBottomOf="@id/ivAvgSpeed"
+        app:layout_constraintStart_toEndOf="@id/ivAvgSpeed"
+        app:layout_constraintTop_toTopOf="@id/ivAvgSpeed" />
+
+    <!-- Average Speed Value -->
+    <TextView
+        android:id="@+id/tvAvgSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_tiny"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_size_body"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/ivAvgSpeed"
+        app:layout_constraintStart_toEndOf="@id/tvAvgSpeedLabel"
+        app:layout_constraintTop_toTopOf="@id/ivAvgSpeed"
+        tools:text="80 km/h" />
+
+    <!-- Maximum Speed Icon -->
+    <ImageView
+        android:id="@+id/ivMaxSpeed"
+        android:layout_width="@dimen/icon_size_small"
+        android:layout_height="@dimen/icon_size_small"
+        android:layout_marginStart="@dimen/margin_extra_large"
+        android:contentDescription="@string/cd_speed_icon"
+        android:src="@drawable/ic_speed_max"
+        app:layout_constraintStart_toEndOf="@id/tvAvgSpeed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/text_secondary" />
+
+    <!-- Maximum Speed Label -->
+    <TextView
+        android:id="@+id/tvMaxSpeedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_tiny"
+        android:text="@string/label_max_speed"
+        android:textColor="@color/text_secondary"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintBottom_toBottomOf="@id/ivMaxSpeed"
+        app:layout_constraintStart_toEndOf="@id/ivMaxSpeed"
+        app:layout_constraintTop_toTopOf="@id/ivMaxSpeed" />
+
+    <!-- Maximum Speed Value -->
+    <TextView
+        android:id="@+id/tvMaxSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_tiny"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_size_body"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/ivMaxSpeed"
+        app:layout_constraintStart_toEndOf="@id/tvMaxSpeedLabel"
+        app:layout_constraintTop_toTopOf="@id/ivMaxSpeed"
+        tools:text="120 km/h" />
+
+    <!-- Driver Icon -->
+    <ImageView
+        android:id="@+id/ivDriver"
+        android:layout_width="@dimen/icon_size_small"
+        android:layout_height="@dimen/icon_size_small"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:contentDescription="@string/cd_driver_icon"
+        android:src="@drawable/ic_driver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivAvgSpeed"
+        app:tint="@color/text_secondary" />
+
+    <!-- Driver Name -->
+    <TextView
+        android:id="@+id/tvDriverName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_tiny"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_size_default"
+        app:layout_constraintBottom_toBottomOf="@id/ivDriver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivDriver"
+        app:layout_constraintTop_toTopOf="@id/ivDriver"
+        tools:text="Rahul Sharma" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

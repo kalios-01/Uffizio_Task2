@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Margins for tablets -->
+    <dimen name="margin_default">20dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_extra_large">32dp</dimen>
+
+    <!-- Paddings for tablets -->
+    <dimen name="padding_default">20dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+    <dimen name="padding_extra_large">32dp</dimen>
+
+    <!-- Card for tablets -->
+    <dimen name="card_margin_horizontal">24dp</dimen>
+    <dimen name="card_padding">20dp</dimen>
+
+    <!-- Text Sizes for tablets -->
+    <dimen name="text_size_body">14sp</dimen>
+    <dimen name="text_size_default">15sp</dimen>
+    <dimen name="text_size_medium">17sp</dimen>
+    <dimen name="text_size_title">22sp</dimen>
+</resources>
